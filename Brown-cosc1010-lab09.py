@@ -1,9 +1,9 @@
-# Your Name Here
+# Fisher Brown
 # UWYO COSC 1010
-# Submission Date
-# Lab XX
-# Lab Section:
-# Sources, people worked with, help given to:
+# 12 Nov 24
+# Lab 09
+# Lab Section: 10
+# Sources, people worked with, help given to: Jayden Robison
 # Your
 # Comments
 # Here
@@ -34,7 +34,29 @@
 # - Assign the parameter for size to a size attribute.
 # - Assign the parameter for sauce to the attribute.
 # - Create the toppings attribute, starting off as a list only holding cheese.
-
+class Pizza
+    def __init__(self,size,sauce_ = 'red')
+        self.setsize(size)
+        self.sauce = sauce_
+        self.toppings = ['cheese']
+    def setsize(self,size)
+        if not size.isdigit() or int(size) < 10:
+            self.size = 10
+        else:
+            self.size = int(size)
+    def getsize(self):
+        return self.size
+    def getsauce(self):
+        return self.sauce
+    def setsauce(self,sauce):
+        self.sauce = sauce
+    def gettoppings(self):
+        return self
+    def settoppings(self,newtoppings):
+        for t in newtoppings:
+            self.toppings.append(t)
+    def gettoppingscount(self):
+        return len(self.toppings)     
 
 # You will be creating a Pizzeria class with the following attributes:
 # - orders, the number of orders placed. Should start at 0.
@@ -69,8 +91,12 @@
 #   - The total price.
 # - getNumberOfOrders()
 #   - This will simply return the number of orders.
-
-
+class Pizzeria
+    def __init__(self,orders = 0,price_per_topping = 0.3,price_per_inch = 0.6,pizzas)
+    def placeorder(self,):
+    def getprice(self,):
+    def getreceipt(self,):
+    def getnumberoforders(self,):
 # - Declare your pizzeria object.
 # - Enter a while loop to ask if the user wants to order a pizza.
 # - Exit on the word `exit`.
